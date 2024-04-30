@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+         
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .product span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .product input[type="number"] {
+            width: 50px;
+            margin: 0 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .product button {
+            background-color: orange;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: #ff8c00;
+        }
+
+        .report-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .report-button:hover {
+            background-color: #555;
+        }
+
+        .order-now {
+            background-color: green;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .order-now:hover {
+            background-color: darkgreen;
+        }
+    </style>
+    
+</head>
+<body>
+    <a href="https://wa.me/whatsappphonenumber?text=I%20want%20to%20order%20the%20following%20products%3A%0D%0A%0D%0A[List%20your%20preferred%20products%20here]%0D%0A%0D%0A"><button class="order-now">Order Now</button></a>
+    <div class="container">
+        <h1>Select your preferred products</h1>
+        <!-- Products will be dynamically added here -->
+    </div>
+    
+    <button class="report-button" onclick="generateUserReport()">Generate User Report</button>
+
+    <!-- New button for admin to view user preferences -->
+    <button class="report-button" onclick="viewUserPreferences()">View User Preferences (Admin)</button>
+
+    <!-- Container to display user preferences -->
+    <div class="container" id="user-preferences-container" style="display: none;">
+        <h1>User Preferences</h1>
+        <ul id="user-preferences-list"></ul>
+    </div>
+    
+    <script>
+        // Array to store preferred products
+        var preferredProducts = [];
+        
+        // Function to dynamically add product with preferred product functionality
+        function addProduct(name, description, price) {
+            var productDiv = document.createElement('div');
+            productDiv.classList.add('product');
+        
+            var productInfo = document.createElement('span');
+            productInfo.textContent = name + " - Ksh 399";
+        
+            var quantityInput = document.createElement('input');
+            quantityInput.type = 'number';
+            quantityInput.min = 0;
+            quantityInput.value = 0;
+        
+            var addButton = document.createElement('button');
+            addButton.textContent = 'Add';
+            addButton.onclick = function() {
+                var quantity = parseInt(quantityInput.value);
+                if (quantity > 0) {
+                    addToPreferred(name, description, price, quantity);
+                } else {
+                    alert("Please enter a quantity greater than 0.");
+                }
+            };
+        
+            productDiv.appendChild(productInfo);
+            productDiv.appendChild(quantityInput);
+            productDiv.appendChild(addButton);
+        
+            document.querySelector('.container').appendChild(productDiv);
+        }
+        
+        function addToPreferred(name, description, price, quantity) {
+            var product = {
+                name: name,
+                description: description,
+                price: price,
+                quantity: quantity
+            };
+            preferredProducts.push(product); // Add product to preferred products array
+            alert("Product added to preferred list.");
+        }
+        
+        // Function to view user preferences for admin
+        function viewUserPreferences() {
+            // In this example, let's just display an alert with the user preferences
+            var userPreferencesString = JSON.stringify(preferredProducts, null, 2);
+            alert("User Preferences:\n" + userPreferencesString);
+        }
+        
+        // Example usage:
+        // Add more products as needed from products.html
+        addProduct('Beet Juice', 'Description of Beet Juice', 399);
+        addProduct('Carrot Juice', 'Description of Carrot Juice', 399);
+        addProduct('Guava Juice', 'Description of Guava Juice', 399);
+        addProduct('Papaya Juice', 'Description of Papaya Juice', 399);
+        addProduct('Pomegranate Juice', 'Description of Pomegranate Juice', 399);
+        addProduct('Mango Juice', 'Description of Mango Juice', 399);
+        addProduct('Orange Juice', 'Description of Orange Juice', 399);
+        addProduct('Pineapple Coconut Juice', 'Description of Pineapple Coconut Juice', 399);
+        addProduct('Avocado Smoothie', 'Description of Avocado Smoothie', 399);
+    </script>
+</body>
+</html>

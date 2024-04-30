@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaNaka</title>
+    <style>
+        /* CSS styles for the navbar */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3; /* Light gray background color */
+        }
+
+        .dark-navbar {
+            background-color: #333; /* Dark background color */
+            color: white; /* Text color */
+            padding: 10px 20px; /* Padding for space */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .orange-text {
+            color: orange; /* Orange color for title */
+            margin: 0; /* Remove default margin */
+        }
+
+        .order-button {
+            background-color: orange; /* Orange background for button */
+            color: white; /* Text color */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .order-button:hover {
+            background-color: #ff8c00; /* Darker shade of orange on hover */
+        }
+
+        .content {
+            margin-top: 20px;
+            overflow: hidden; /* Clear float */
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: space-around; /* Align items evenly with space around */
+        }
+
+        .juice-item {
+            width: 25%; /* Each item takes 25% of the container */
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            margin-bottom: 20px; /* Add some space between items */
+        }
+
+        .juice-item img {
+            width: 100%;
+            height: 200px; /* Adjust the height as needed */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 10px;
+        }
+
+        .juice-item p {
+            color: #666; /* Description text color */
+            margin-top: 5px;
+        }
+
+        .add-to-preferred {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Added to remove underline from the link */
+        }
+
+        .add-to-preferred:hover {
+            background-color: #ff8c00;
+        }
+
+        .source-content {
+            background-color: #fff; /* White background color */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .source-content h2 {
+            color: #333; /* Dark text color */
+        }
+
+        .source-content p {
+            color: #666; /* Description text color */
+        }
+    </style>
+</head>
+<body>
+    <nav class="dark-navbar">
+        <div class="title-section">
+            <div class="title-content">
+                <h1 class="orange-text">Fa<span>Naka</span></h1>
+                <p>Welcome to FaNaka - your one-stop shop for refreshing beverages!</p>
+            </div>
+        </div>
+        <button class="order-button">Place Order</button>
+    </nav>
+    <h2>Juice Products</h2>
+    <!-- Juice Products Section -->
+    <div class="content">
+        <div class="juice-item">
+            <img src="Beet.jpeg" alt="Beet Juice">
+            <p>Beet Juice - Ksh399</p>
+            <button class="add-to-preferred"><a href="preferred products.html">Add to Preferred</a></button>
+        </div>
+        <div class="juice-item">
+            <img src="Carrot.jpeg" alt="Carrot Juice">
+            <p>Carrot Juice - Ksh399</p>
+            <button class="add-to-preferred"><a href="preferred products.html">Add to Preferred</a></button>
+        </div>
+        <div class="juice-item">
+            <img src="Guava Juice.jpeg" alt="Guava Juice">
+            <p>Guava Juice - Ksh399</p>
+            <button class="add-to-preferred"><a href="preferred products.html">Add to Preferred</a></button>
+        </div>
+        <div class="juice-item">
+            <img src="Papaya.jpeg" alt="Papaya Juice">
+            <p>Papaya Juice - Ksh399</p>
+            <button class="add-to-preferred"><a href="preferred products.html">Add to Preferred</a></button>
+        </div>
+        <div class="juice-item">
+            <img src="Pomegranate Juice.jpeg" alt="Pomegranate Juice">
+            <p>Pomegranate Juice - Ksh399</p>
+            <button class="add-to-preferred"><a href="preferred products.html">Add to Preferred</a></button>
+        </div>
+         <div class="juice-item">
+            <img src="mango.jpeg" alt="Mango Juice">
+            <p>Mango Juice - Ksh399</p>
+            <button class="add-to-preferred"><a href="preferred products.html">Add to Preferred</a></button>
+        </div>
+         <div class="juice-item">
+            <img src="Orange juice.jpeg" alt="Orange juice">
+            <p>Orange Juice - Ksh399</p>
+            <button class="add-to-preferred"><a href="preferred products.html">Add to Preferred</a></button>
+        </div>
+        <div class="juice-item">
+            <img src="Pineapple Coconut .jpeg" alt="Pineapple Coconut juice">
+            <p>Pineapple Coconut - Ksh399</p>
+            <button class="add-to-preferred"><a href="preferred products.html">Add to Preferred</a></button>
+        </div>
+         <div class="juice-item">
+            <img src="Avocado Smoothie.jpeg" alt="Avocado Smoothie juice">
+            <p>Pineapple Coconut - Ksh399</p>
+            <button class="add-to-preferred"><a href="preferred products.html">Add to Preferred</a></button>
+        </div>
+        <!-- Add other juice items here -->
+    </div>
+    <!-- Content about the source of the juice -->
+    <div class="source-content">
+        <h2>Our Commitment to Quality</h2>
+        <p>At FaNaka, we are dedicated to providing you with the freshest and most nutritious juices. Our fruits and vegetables are sourced directly from well farmers who prioritize quality and sustainability. By supporting local farmers, we ensure that you receive the healthiest beverages packed with vitamins and minerals. Enjoy our juices guilt-free, knowing that every sip contributes to your well-being and supports our farming communities.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* about.css */
+
+/* Style the header */
+/* Existing CSS rules */
+
+header {
+    background-color: black; /* Set background color to black */
+    color: #ff7200; /* Set text color to white */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* More existing CSS rules */
+
+
+/* Style the content */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #000; /* Change font color to black */
+    background-size: 600px 600px; /* Set background size */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+    background-position: center; /* Center the background image */
+}
+
+
+/* Style paragraphs */
+.content p {
+    margin-bottom: 20px; /* Add space between paragraphs */
+}

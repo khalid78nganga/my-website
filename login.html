@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css"> <!-- Link to your CSS file -->
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+   
+
+    <div class="login-container">
+        <h2 class="login-title">Login to FaNaka</h2>
+        <form class="login-form" action="login.php" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="sign up.html">Sign up here</a></p>
+        <div class="login-social">
+            <p>Or login with:</p>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://www.google.com/accounts/Login"><ion-icon name="logo-google"></ion-icon></a> <!-- Change the href to your Google login endpoint -->
+        </div>
+    </div>
+</body>
+</html>

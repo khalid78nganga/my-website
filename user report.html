@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Report</title>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>User Report</h1>
+    <!-- Canvas element for the chart -->
+    <canvas id="userReportChart"></canvas>
+
+    <script>
+        // PHP-like data format for demonstration
+        <?php
+        // Fetch data from database and store it in $userData array
+        $userData = array(
+            array("month" => "January", "value" => 100),
+            array("month" => "February", "value" => 150),
+            array("month" => "March", "value" => 200),
+            // Add more data points as needed
+        );
+        ?>
+
+        // JavaScript code to process and display the chart
+        // Data from PHP array to JavaScript
+        var userData = <?php echo json_encode($userData); ?>;
+
+        // Extracting month names and values from userData
+        var months = userData.map(item => item.month);
+        var values = userData.map(item => item.value);
+
+        // Creating the chart
+        var ctx = document.getElementById('userReportChart').getContext('2d');
+        var userReportChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: months, // X-axis labels (months)
+                datasets: [{
+                    label: 'User Activity',
+                    data: values, // Y-axis values (activity)
+                    borderColor: 'rgb(75, 192, 192)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true // Start Y-axis from 0
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

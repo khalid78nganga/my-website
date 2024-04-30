@@ -1,0 +1,46 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the background photo */
+.background-photo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background-photo.jpg'); /* Replace 'background-photo.jpg' with your photo */
+    background-size: cover;
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+/* Style for the title section */
+.title-section {
+    background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+    padding: 50px;
+}
+
+/* Style for the title content */
+.title-content {
+    text-align: center;
+}
+
+.title-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.title-content p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Style for the content section */
+.content {
+    margin-top: 20px; /* Add margin to separate from title section */
+    padding: 20px;
+    background-color: #fff; /* White background */
+}

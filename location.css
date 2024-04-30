@@ -1,0 +1,56 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+}
+
+/* Content styles */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.map {
+    margin-bottom: 20px;
+}
+
+.address {
+    margin-top: 20px;
+}
+
+.address h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.address p {
+    font-size: 18px;
+    color: #555;
+}

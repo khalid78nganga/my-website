@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 50%), url(fruit.jpeg);
+    background-position: center;
+    background-size: cover; /* Changed to cover for better background image fit */
+    height: 100vh;
+}
+
+.navbar {
+    width: 100%; /* Adjusted width to full width */
+    height: 75px;
+    background-color: #000; /* Added background color for better contrast */
+    display: flex; /* Changed to flex for easier alignment */
+    align-items: center; /* Vertically center align items */
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.icon {
+    width: auto; /* Removed fixed width */
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+.logo {
+    color: #ff7200;
+    font-size: 35px;
+    font-family: 'Arial', sans-serif; /* Added fallback font */
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+.menu ul {
+    display: flex; /* Changed to flex for easier alignment */
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 0 20px; /* Adjusted spacing */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Arial', sans-serif; /* Added fallback font */
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+.menu ul li a:hover {
+    color: #ff7200;
+}
+
+.search {
+    margin-left: auto; /* Pushes the search to the right */
+}
+
+.srch {
+    font-family: 'Times New Roman', serif; /* Changed font */
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    transition: border-color 0.3s ease; /* Added transition */
+}
+
+.srch:focus {
+    outline: none;
+    border-color: #ff7200; /* Added border color change on focus */
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200; /* Changed border color to match background */
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition */
+}
+
+.btn:hover {
+    background: #fff;
+    color: #ff7200;
+}
+
+.content {
+    width: 1200px;
+    margin: auto;
+    color: #fff;
+    padding: 20px; /* Added padding for spacing */
+}
+
+.content h1{
+    font-family: 'Times New Roman', serif;
+    font-size: 50px;
+    margin-top: 20px; /* Adjusted margin top */
+    letter-spacing: 2px;
+    color: orange;
+}
+
+.content .par {
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 25px;
+    line-height: 1.5; /* Changed line height for better readability */
+}
+
+/* Adjust icon position */
+.form .icon {
+    margin-top: 20px; /* Add margin to separate icons from other elements */
+    display: flex; /* Arrange icons horizontally */
+    justify-content: space-around; /* Evenly distribute icons */
+}
+
+/* Your existing CSS styles for icons */
+
+.form input {
+    width: 100%;
+    height: 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ff7200;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    padding: 5px; /* Adjusted padding for better spacing */
+    font-family: 'Arial', sans-serif;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: #fff;
+    font-family: Arial;
+}
+
+.btnn {
+    width: 100%;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 20px; /* Adjusted margin for better spacing */
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition */
+}
+
+.btnn:hover{
+    background: #fff;
+    color: #ff7200;
+}
+
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Adjust text colors and alignment */
+.form .link, .form a {
+    color: #fff; /* Set text color to white */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Add font weight */
+    text-align: center; /* Center align text */
+}
+
+.form .link {
+    margin-top: 20px; /* Add top margin */
+}
+
+.liw {
+    color: #fff; /* Set text color to white */
+    text-align: center; /* Center align text */
+    margin-top: 15px; /* Add top margin */
+}
+/* Your existing CSS styles */
+
+.icon a {
+    color: #fff; /* Set initial icon color to white */
+    transition: color 0
